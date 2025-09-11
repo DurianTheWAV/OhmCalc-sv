@@ -1,7 +1,7 @@
 # OhmCalc-sv
 
 ## Descrition
-OhmCalc-sv is the official svelte portage of [OhmCalc-cli](https://github.com/Dexerix/OhmCalc-cli). The app performs various electrical calculations based on Ohm's law and other electrical formulas.
+OhmCalc-sv is the official sveltejs port of [OhmCalc-cli](https://github.com/Dexerix/OhmCalc-cli). This web app performs various electrical calculations based on Ohm's law and other electrical formulas.
 
 ## Features
 - Voltage calculation
@@ -27,6 +27,6 @@ OhmCalc-sv is the official svelte portage of [OhmCalc-cli](https://github.com/De
    - Serial resistors
 
 ## Input Format
-- For large numbers, you can use scientific notation: `2.5*10^3` instead of `2500`
+- For large numbers, you can use scientific notation: `2.5*10^-3` instead of `0.0025`
 - Units are automatically handled by the program
 - All decimal numbers should use a point (.) as separator
