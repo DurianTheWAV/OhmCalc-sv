@@ -4,11 +4,12 @@ function treat_exp(raw_v: string): number {
     let calculated_value: number;
     if (raw_v.indexOf("*") !== -1) {
         let parts = raw_v.split("*");
+        console.log(parts);
         let base_value = stringToNumeric(parts[0]);
         let exponent = parts[1];
         let exp_parts = exponent.split("^");
-        let power = stringToNumeric(exp_parts[1])
-        let exponent_value = 10**power;
+        let power = stringToNumeric(exp_parts[1]);
+        let exponent_value = 10 ** power;
 
         calculated_value = base_value * exponent_value;
     } else {
@@ -26,6 +27,7 @@ export function voltage(raw_r:string, raw_i:string): number {
     i = treat_exp(raw_i)
     v = r * i;
     if (isNaN(v)) {
+        alert("Invalid input values");
         v = 0;
     }
     return v;
@@ -40,6 +42,7 @@ export function amperage(raw_v:string, raw_r:string): number {
     r = treat_exp(raw_r);
     a = v / r;
     if (isNaN(a)) {
+        alert("Invalid input values");
         a = 0;
     }
     return a;
@@ -54,6 +57,7 @@ export function resistance(raw_v:string, raw_i:string): number {
     i = treat_exp(raw_i);
     r = v / i;
     if (isNaN(r)) {
+        alert("Invalid input values");
         r = 0;
     }
     return r;
@@ -66,6 +70,7 @@ export function section(raw_diameter: string): number {
     diameter = treat_exp(raw_diameter);
     gauge = Math.PI * Math.pow(diameter, 2) / 4;
     if (isNaN(gauge)) {
+        alert("Invalid input values");
         gauge = 0;
     }
     return gauge;
@@ -82,6 +87,7 @@ export function resistivity(raw_r:string, raw_gauge:string, raw_l:string): numbe
     l = treat_exp(raw_l);
     rho = (r * gauge) / l;
     if (isNaN(rho)) {
+        alert("Invalid input values");
         rho = 0;
     }
     return rho;
@@ -98,6 +104,7 @@ export function rhosistance(raw_rho:string, raw_gauge:string, raw_l:string): num
     rho = treat_exp(raw_rho);
     r = (rho * l) / gauge;
     if (isNaN(r)) {
+        alert("Invalid input values");
         r = 0;
     }
     return r;
@@ -117,6 +124,7 @@ export function parallel_resistor(r_list: string[]): number {
         }
         r_total = 1 / r_total;
         if (isNaN(r_total)) {
+            alert("Invalid input values");
             r_total = 0;
         }
         return r_total;
@@ -135,6 +143,7 @@ export function serial_resistor(r_list: string[]): number {
         r_total = treat_exp(r_list[0]);
     }
     if (isNaN(r_total)) {
+        alert("Invalid input values");
         r_total = 0;
     }
     return r_total;

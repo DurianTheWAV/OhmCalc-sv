@@ -6,17 +6,18 @@
     let voltage: string = $state('');
     let resistance: string = $state('');
     let amperageValue: number = $state(0);
+    import * as m from '$lib/paraglide/messages';
 </script>
-<Header title="Amperage"/>
+<Header title={m.intensity()}/>
 <div class="fields">
-<label for="voltage">Voltage (V):</label>
+<label for="voltage">{m.voltage()} (V):</label>
 <input bind:value={voltage} type="text" name="voltage" id="voltage" class="input">
-<label for="resistance">Resistance (Ω):</label>
+<label for="resistance">{m.resistance()} (Ω):</label>
 <input bind:value={resistance} type="text" name="resistance" id="resistance" class="input">
-<button onclick={() => { amperageValue = amperage(voltage, resistance); }}>Calculate</button>
-<p>Amperage: {amperageValue} A</p>
+<button onclick={() => { amperageValue = amperage(voltage, resistance); }}>{m.calcul()}</button>
+<p>{m.intensity()}: {amperageValue} A</p>
 </div>
 <div class="description">
-    <p>The amperage <em>I</em> in amperes (A) is equal to the voltage <em>V</em> in volts (V) divided by the resistance <em>R</em> in ohms (Ω):</p>
+    <p>{@html m.lazy_home_samuel_explore()}</p>
     <p><strong>I = V / R</strong></p>
 </div>

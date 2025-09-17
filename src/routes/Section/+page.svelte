@@ -3,24 +3,25 @@
     let { data }: { data: PageData } = $props();
     import Header from '../Header.svelte';
     import { section } from '../Ohm.svelte';
+    import * as m from '$lib/paraglide/messages';
     let raw_diameter: string = $state('');
     let gaugeValue: number = $state(0);
 </script>
 
-<Header title="Section" />
+<Header title="Section"/>
 
 <div class="fields">
-    <label for="diameter">Diameter (mm):</label>
+    <label for="diameter">{m.diameter()} (mm):</label>
     <input bind:value={raw_diameter} type="text" name="diameter" id="diameter" class="input">
-    <button onclick={() => { gaugeValue = section(raw_diameter); }}>Calculate</button>
-    <p>Gauge: {gaugeValue} mm2</p>
+    <button onclick={() => { gaugeValue = section(raw_diameter); }}>{m.calcul()}</button>
+    <p>{m.section_cable()}: {gaugeValue} mm2</p>
 </div>
 
 <div class="description">
-    <p>The cross-sectional area <em>A</em> in square millimeters (mm²) of a conductor is calculated using the formula:</p>
+    <p>{@html m.few_drab_seahorse_jolt()}</p>
     <p><strong>A = π × (d/2)²</strong></p>
-    <p>Where:</p>
+    <p>{m.where()}</p>
     <ul>
-        <li><em>d</em> is the diameter in millimeters (mm)</li>
+        <li>{@html m.d_diameter()}</li>
     </ul>
 </div>

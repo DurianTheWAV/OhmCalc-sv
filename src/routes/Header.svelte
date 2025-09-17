@@ -1,5 +1,6 @@
 <script lang="ts">
     const {title} = $props();
+    import * as m from "$lib/paraglide/messages"
 </script>
 <style>
     * {
@@ -35,15 +36,6 @@
     }
 
     @media only screen and (max-width: 720px) {
-        header nav a {
-            border: none;
-            padding: 0;
-            text-decoration: underline;
-            line-height: 1;
-        }
-    }
-
-    @media only screen and (max-width: 720px) {
         h1 {
             font-size: 2.5rem;
         }
@@ -52,6 +44,6 @@
 <header>
     <h1>{title}</h1>
     <nav>
-        <a href=".">Home</a>
+        <a href=".">{m.home()}</a>
     </nav>
 </header>

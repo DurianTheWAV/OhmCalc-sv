@@ -32,23 +32,26 @@
         color: var(--border);
     }
 </style>
+<script>
+    import * as m from "$lib/paraglide/messages"
+</script>
 
-<h3>Base formulas</h3>
+<h3>{m.section_1()}</h3>
 <ul>
-    <li><a href="./Voltage">Voltage</a></li>
-    <li><a href="./Amperage">Amperage</a></li>
-    <li><a href="./Resistance">Resistance</a></li>
+    <li><a href="./Voltage">{m.voltage()}</a></li>
+    <li><a href="./Amperage">{m.intensity()}</a></li>
+    <li><a href="./Resistance">{m.resistance()}</a></li>
 </ul>
 
-<h3>Conducter formulas</h3>
+<h3>{m.section_2()}</h3>
 <ul>
     <li><a href="./Section">Section</a></li>
-    <li><a href="./Resistivity">Resistivity</a></li>
-    <li><a href="./Rhosistance">Resistance using rho (ρ)</a></li>
+    <li><a href="./Resistivity">{m.lost_lower_hyena_embrace()}</a></li>
+    <li><a href="./Rhosistance">{m.neat_red_cat_hope()}</a></li>
 </ul>
 
-<h3>Resistor formulas</h3>
+<h3>{m.section_3()}</h3>
 <ul>
-    <li><a href="./Parallel">Parallel resistors</a></li>
-    <li><a href="./Serial">Serial resistors</a></li>
+    <li><a href="./Parallel">{m.parallel()}</a></li>
+    <li><a href="./Serial">{m.serial()}</a></li>
 </ul>
