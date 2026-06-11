@@ -19,7 +19,7 @@ OhmCalc-sv is the official sveltejs port of [OhmCalc-cli](https://github.com/Dex
 
 ### Web app
 
-1. Go on [the website](https://ohmcalc.retrosound.club)
+1. Go on [the website](https://ohmcalc.luyet.ch)
 2. Choose your calculation from the menu by clicking on the corresponding formula :
    - Voltage
    - Amperage
