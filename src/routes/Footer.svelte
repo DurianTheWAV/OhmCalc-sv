@@ -39,12 +39,7 @@
         <a href="https://ko-fi.com/L3L11A3Z1N" target="_blank"><img height="36" style="border:0px;height:36px;" src="https://storage.ko-fi.com/cdn/kofi3.png?v=6" alt="Buy Me a Coffee at ko-fi.com"></a>
     </div>
     <div id="copyright">
-<<<<<<< HEAD
         <p>Mit ❤️ von <a href="https://github.com/DurianTheWAV/">Durian</a> in der Schweiz</p>
         <p>© 2026 OhmCalc-sv</p>
-=======
-        <p>Made with ❤️ by <a href="https://github.com/DurianTheWAV/">DurianTheWAV</a> in Switzerland</p>
-        <p>© 2025-2026 OhmCalc-sv</p>
->>>>>>> fc3df3cdfb82b4d4719a7ad9188a57b7e61e4e04
     </div>
 </footer>
