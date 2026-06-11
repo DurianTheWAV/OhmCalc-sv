@@ -10,4 +10,7 @@ export default defineConfig({
       outdir: "./src/lib/paraglide",
     }),
   ],
+  ssr: {
+    external: ['async_hooks']
+  }
 });
