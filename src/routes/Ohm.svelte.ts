@@ -27,7 +27,8 @@ export function voltage(raw_r: string, raw_i: string): number {
   i = treat_exp(raw_i);
   v = r * i;
   if (isNaN(v)) {
-    alert("Invalid input values");
+    // alert("Invalid input values");
+    alert("Unzulässige Werte");
     v = 0;
   }
   return v;
@@ -42,7 +43,8 @@ export function amperage(raw_v: string, raw_r: string): number {
   r = treat_exp(raw_r);
   a = v / r;
   if (isNaN(a)) {
-    alert("Invalid input values");
+    // alert("Invalid input values");
+    alert("Unzulässige Werte");
     a = 0;
   }
   return a;
@@ -57,7 +59,8 @@ export function resistance(raw_v: string, raw_i: string): number {
   i = treat_exp(raw_i);
   r = v / i;
   if (isNaN(r)) {
-    alert("Invalid input values");
+    // alert("Invalid input values");
+    alert("Unzulässige Werte");
     r = 0;
   }
   return r;
@@ -70,7 +73,8 @@ export function section(raw_diameter: string): number {
   diameter = treat_exp(raw_diameter);
   gauge = (Math.PI * Math.pow(diameter, 2)) / 4;
   if (isNaN(gauge)) {
-    alert("Invalid input values");
+    // alert("Invalid input values");
+    alert("Unzulässige Werte");
     gauge = 0;
   }
   return gauge;
@@ -91,7 +95,8 @@ export function resistivity(
   l = treat_exp(raw_l);
   rho = (r * gauge) / l;
   if (isNaN(rho)) {
-    alert("Invalid input values");
+    // alert("Invalid input values");
+    alert("Unzulässige Werte");
     rho = 0;
   }
   return rho;
@@ -112,7 +117,8 @@ export function rhosistance(
   rho = treat_exp(raw_rho);
   r = (rho * l) / gauge;
   if (isNaN(r)) {
-    alert("Invalid input values");
+    // alert("Invalid input values");
+    alert("Unzulässige Werte");
     r = 0;
   }
   return r;
@@ -132,7 +138,8 @@ export function parallel_resistor(r_list: string[]): number {
     }
     r_total = 1 / r_total;
     if (isNaN(r_total)) {
-      alert("Invalid input values");
+      // alert("Invalid input values");
+      alert("Unzulässige Werte");
       r_total = 0;
     }
     return r_total;
@@ -151,7 +158,8 @@ export function serial_resistor(r_list: string[]): number {
     r_total = treat_exp(r_list[0]);
   }
   if (isNaN(r_total)) {
-    alert("Invalid input values");
+    // alert("Invalid input values");
+    alert("Unzulässige Werte");
     r_total = 0;
   }
   return r_total;
