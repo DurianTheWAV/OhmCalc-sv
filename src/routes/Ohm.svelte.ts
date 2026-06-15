@@ -27,8 +27,7 @@ export function voltage(raw_r: string, raw_i: string): number {
   i = treat_exp(raw_i);
   v = r * i;
   if (isNaN(v)) {
-    // alert("Invalid input values");
-    alert("Unzulässige Werte");
+    alert("Invalid input values");
     v = 0;
   }
   return v;
@@ -43,8 +42,7 @@ export function amperage(raw_v: string, raw_r: string): number {
   r = treat_exp(raw_r);
   a = v / r;
   if (isNaN(a)) {
-    // alert("Invalid input values");
-    alert("Unzulässige Werte");
+    alert("Invalid input values");
     a = 0;
   }
   return a;
@@ -59,8 +57,7 @@ export function resistance(raw_v: string, raw_i: string): number {
   i = treat_exp(raw_i);
   r = v / i;
   if (isNaN(r)) {
-    // alert("Invalid input values");
-    alert("Unzulässige Werte");
+    alert("Invalid input values");
     r = 0;
   }
   return r;
@@ -73,8 +70,7 @@ export function section(raw_diameter: string): number {
   diameter = treat_exp(raw_diameter);
   gauge = (Math.PI * Math.pow(diameter, 2)) / 4;
   if (isNaN(gauge)) {
-    // alert("Invalid input values");
-    alert("Unzulässige Werte");
+    alert("Invalid input values");
     gauge = 0;
   }
   return gauge;
