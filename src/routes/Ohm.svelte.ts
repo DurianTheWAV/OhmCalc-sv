@@ -91,8 +91,7 @@ export function resistivity(
   l = treat_exp(raw_l);
   rho = (r * gauge) / l;
   if (isNaN(rho)) {
-    // alert("Invalid input values");
-    alert("Unzulässige Werte");
+    alert("Invalid input values");
     rho = 0;
   }
   return rho;
@@ -113,8 +112,7 @@ export function rhosistance(
   rho = treat_exp(raw_rho);
   r = (rho * l) / gauge;
   if (isNaN(r)) {
-    // alert("Invalid input values");
-    alert("Unzulässige Werte");
+    alert("Invalid input values");
     r = 0;
   }
   return r;
@@ -134,8 +132,7 @@ export function parallel_resistor(r_list: string[]): number {
     }
     r_total = 1 / r_total;
     if (isNaN(r_total)) {
-      // alert("Invalid input values");
-      alert("Unzulässige Werte");
+      alert("Invalid input values");
       r_total = 0;
     }
     return r_total;
@@ -154,8 +151,7 @@ export function serial_resistor(r_list: string[]): number {
     r_total = treat_exp(r_list[0]);
   }
   if (isNaN(r_total)) {
-    // alert("Invalid input values");
-    alert("Unzulässige Werte");
+    alert("Invalid input values");
     r_total = 0;
   }
   return r_total;
