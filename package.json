@@ -11,15 +11,15 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
-    "lint": "prettier --check . && eslint ."
+    "lint": "prettier --check . && eslint .",
+    "start": "node build"
   },
   "devDependencies": {
     "@cityssm/string-to-numeric": "^1.0.0",
     "@eslint/compat": "^1.2.5",
     "@eslint/js": "^9.18.0",
     "@inlang/paraglide-js": "^2.0.0",
-    "@sveltejs/adapter-auto": "^6.0.0",
-    "@sveltejs/adapter-cloudflare": "^7.2.8",
+    "@sveltejs/adapter-node": "6.0.2",
     "@sveltejs/kit": "^2.16.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "eslint": "^9.18.0",
@@ -38,7 +38,10 @@
   },
   "allowScripts": {
     "esbuild@0.25.5": true,
+    "esbuild@0.27.3": true,
     "@parcel/watcher@2.5.1": true,
-    "svelte-preprocess@6.0.3": true
+    "svelte-preprocess@6.0.3": true,
+    "sharp@0.34.5": true,
+    "workerd@1.20260609.1": true
   }
 }
